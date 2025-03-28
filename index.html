@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Прогноз погоды</h1>
+        
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Введите город">
+            <button id="searchBtn">Показать погоду</button>
+            <button id="cancelBtn">Отменить</button>
+        </div>
+        
+        <div class="loader" id="loader"></div>
+        <div class="error-message" id="errorMessage"></div>
+        
+        <div class="current-weather" id="currentWeather" style="display: none;">
+            <h2 id="cityName"></h2>
+            <div class="weather-info">
+                <div>
+                    <p>Температура: <span id="temperature"></span>°C</p>
+                    <p>Влажность: <span id="humidity"></span>%</p>
+                </div>
+                <img id="currentWeatherIcon" class="weather-icon" src="" alt="Weather icon">
+            </div>
+        </div>
+        
+        <div class="forecast" id="forecast" style="display: none;">
+            <h3>Прогноз на 7 дней</h3>
+            <div class="forecast-list" id="forecastList"></div>
+        </div>
+        
+        <div class="history" id="history" style="display: none;">
+            <h3>История запросов</h3>
+            <div class="history-list" id="historyList"></div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
